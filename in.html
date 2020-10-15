@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lazyupdate.github.io/in.html?name=wawawa&id=1234567890&door=%E5%8D%97 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>上报位置</title>
+    <link rel="shortcut icon" href="http://wz.hitwh.edu.cn/resources/hit/favicon/favicon.ico">
+    <link rel="stylesheet" href="./index_files/commen.css">
+    <link rel="stylesheet" href="./index_files/iconfont.css">
+    <link rel="stylesheet" href="./index_files/qiandao.css">
+    <script src="./index_files/jquery-1.9.1.min.js.下载"></script>
+    <script type="text/javascript">
+        document.addEventListener('plusready', function () {
+            //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+        });
+    </script>
+    <script type="text/javascript">
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) { return decodeURI(pair[1]); }
+            }
+            return "";
+        }
+    </script>
+    <style>
+        .qd-jr {
+            background: #09ca68;
+        }
+
+        .bcg {
+            background: #ed1c37;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="qd-box">
+        <div class="qd-head">
+            <div class="qd-left">
+                <div class="qd-name" id="xm">
+                    <script>document.write(getQueryVariable("name"))</script>
+                </div>
+                <div class="qd-number" id="xh">
+                    <script>document.write(getQueryVariable("id"))</script>
+                </div>
+                <div class="qd-number" id="xy"></div>
+            </div>
+            <div class="qd-right">
+                <span class="iconfont icontuichu"></span>
+                <span class="qd-tcdl" onclick="signOut()">退出登录</span>
+            </div>
+        </div>
+        <div class="ke-box">
+            <div class="qd-kename" id="kcxx">位置信息 </div>
+            <div class="qd-jssj">
+                <div class="line"><span>楼宇：</span><span id="skdd">学校<script>document.write(getQueryVariable("door"))</script>门进(限制2次)</span></div>
+                <div class="line"><span> 日期：
+                    </span><span id="skrq">
+                        <script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>2020-10-15 10:35
+                    </span></div>
+            </div>
+            <div style="display: flex;">
+                <div id="sb_cg" class="qd-button" style="">上报位置成功</div>
+                <div id="sb_bcg" class="qd-button bcg" style="display:none"></div>
+            </div>
+            <div class="qd-jrqd">
+                <div class="qd-tipline">
+                    <div class="tip">今日上报</div>
+                </div>
+                <div class="qd-lbbox qd-nodata" style="display: none;">
+                    <img src="./index_files/zanwuxiaoxi.svg" alt="">
+                    <div class="qd-nodatazi">今日暂无上报记录</div>
+                </div>
+                <div class="qd-lbbox" id="jrqd1">
+                    <div id="jrqd">
+                        <div class="ke-box lbke">
+                            <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">上报时间：<script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + new Date().getHours() + ':' + String(new Date().getMinutes()).padStart(2, '0'))</script>2020-10-15 10:35</div>
+                            <div class="qd-rkxx"><span id="jsxm">学校<script>document.write(getQueryVariable("door"))</script>门进(限制2次)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
+                        </div>
+                        <div class="ke-box lbke">
+                            <div class="qd-kename" style="font-weight: normal;;margin-top:5px;">上报时间：<script>document.write(new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() + ' ' + Math.round(new Date().getHours() - 1 - Math.random() * 1.2) + ':' + String(Math.round(new Date().getMinutes() + Math.random() * 60) % 60).padStart(2, '0'))</script>2020-10-15 8:57</div>
+                            <div class="qd-rkxx"><span id="jsxm">学校<script>document.write(getQueryVariable("door"))</script>门出(限制2次)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span id="skjc">进入</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zi"></div>
+        </div>
+
+
+
+
+</div></body></html>
